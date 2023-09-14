@@ -261,6 +261,8 @@ class VersatileAttention(CrossAttention):
         self.attention_mode = attention_mode
         self.is_cross_attention = kwargs["cross_attention_dim"] is not None
 
+        self._use_memory_efficient_attention_xformers = True
+
         self.pos_encoder = PositionalEncoding(
             kwargs["query_dim"],
             dropout=0.,
