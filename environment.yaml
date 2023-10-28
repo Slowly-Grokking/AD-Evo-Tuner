@@ -23,7 +23,7 @@ dependencies:
     - opencv-python
     - scipy
     - compel
-    - xformers==0.0.17
+    - xformers==0.0.16
     - google
     - protobuf
     - tensorboardX
