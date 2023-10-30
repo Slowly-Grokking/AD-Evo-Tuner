@@ -37,7 +37,7 @@ local_file_paths = [
     "tokenizer/tokenizer_config.json",
     "tokenizer/vocab.json",
     "model_index.json",
-    "scheduler/scheduler_config.json"
+    "scheduler_config.json"
 ]
 
 sd_root = "models/StableDiffusion/"
