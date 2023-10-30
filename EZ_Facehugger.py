@@ -2,37 +2,44 @@ import requests
 import os
 
 # Define the base URL for your Hugging Face repository
-base_download_url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main"
+base_download_url = "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main"
 
 file_urls = [
-    f"{base_download_url}/text_encoder/config.json",
-    f"{base_download_url}/text_encoder/model.fp16.safetensors",
-    f"{base_download_url}/unet/config.json",
-    f"{base_download_url}/unet/diffusion_pytorch_model.fp16.safetensors",
-    f"{base_download_url}/vae/config.json",
-    f"{base_download_url}/vae/diffusion_pytorch_model.fp16.safetensors",
+    f"{base_download_url}/text_encoder/config.json",   
+    f"{base_download_url}/unet/config.json",    
+    f"{base_download_url}/vae/config.json",  
     f"{base_download_url}/tokenizer/merges.txt",
     f"{base_download_url}/tokenizer/special_tokens_map.json",
     f"{base_download_url}/tokenizer/tokenizer_config.json",
     f"{base_download_url}/tokenizer/vocab.json",
-    f"{base_download_url}/model_index.json"
+    f"{base_download_url}/scheduler/scheduler_config.json",
+    f"{base_download_url}/model_index.json",
+    f"{base_download_url}/safety_checker/pytorch_model.bin",
+    f"{base_download_url}/text_encoder/pytorch_model.bin",
+    f"{base_download_url}/text_encoder/model.fp16.safetensors",
+    f"{base_download_url}/vae/diffusion_pytorch_model.bin",
+    f"{base_download_url}/vae/diffusion_pytorch_model.fp16.safetensors",
+    f"{base_download_url}/unet/diffusion_pytorch_model.bin", 
+    f"{base_download_url}/unet/diffusion_pytorch_model.fp16.safetensors",    
 ]
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
 
 local_file_paths = [
-    "text_encoder/config.json",
-    "text_encoder/model.fp16.safetensors",
-    "unet/config.json",
-    "unet/diffusion_pytorch_model.fp16.safetensors",
-    "vae/config.json",
-    "vae/diffusion_pytorch_model.fp16.safetensors",
+    "text_encoder/config.json",   
+    "unet/config.json",   
+    "vae/config.json", 
     "tokenizer/merges.txt",
     "tokenizer/special_tokens_map.json",
     "tokenizer/tokenizer_config.json",
     "tokenizer/vocab.json",
-    "model_index.json"
+    "scheduler/scheduler_config.json",
+    "model_index.json",
+    "safety_checker/pytorch_model.bin", 
+    "text_encoder/model.fp16.safetensors",
+    "vae/diffusion_pytorch_model.fp16.safetensors",
+    "unet/diffusion_pytorch_model.fp16.safetensors",
 ]
 
 sd_root = "models/StableDiffusion/"
